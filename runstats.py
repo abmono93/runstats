@@ -34,7 +34,7 @@ dates_list = worksheet.col_values(1)
 # go through the rows from the csv file and list which ones aren't on the worksheet yet
 to_add = []
 for row in rows:
-	if row[0] == "running":
+	if row[0].lower() == "running":
 		if row[1][11] == '0':
 			date = row[1][:11] + row[1][12:]
 		else:
